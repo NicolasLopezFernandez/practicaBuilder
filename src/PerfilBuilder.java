@@ -1,16 +1,17 @@
-abstract class PerfilBuilder implements PantallaBuilder {
+public class PerfilBuilder implements PantallaBuilder {
     private Pantalla pantalla;
 
     public PerfilBuilder() {
         pantalla = new Pantalla();
+    }
 
-        @Override
-        public void construirTitulo() {
-            pantalla.setTitulo("Mi Perfil");
-        }
-        @Override
-        public void construirCabezera() {
-            pantalla.setCabezera("Datos del usuario");
+    @Override
+    public void construirTitulo() {
+        pantalla.setTitulo("Mi Perfil");
+    }
+    @Override
+        public void construirCabecera() {
+            pantalla.setCabecera("Datos del usuario");
         }
         @Override
         public void construirContenido() {
@@ -20,5 +21,8 @@ abstract class PerfilBuilder implements PantallaBuilder {
         public void construirBotonPrincipal() {
             pantalla.setBotonPrincipal("EDITAR PERFIL");
         }
+        @Override
+        public Pantalla getPantalla() {
+            return pantalla;
     }
 }

@@ -1,16 +1,16 @@
-abstract class AjustesBuilder implements PantallaBuilder {
+public class AjustesBuilder implements PantallaBuilder {
     private Pantalla pantalla;
 
     public AjustesBuilder() {
         pantalla = new Pantalla();
-
+    }
         @Override
-        public void construirtitulo() {
+        public void construirTitulo() {
             pantalla.setTitulo("Ajustes");
         }
         @Override
-        public void construirCabezera() {
-            pantalla.setCabezera("Configuración de la aplicación");
+        public void construirCabecera() {
+            pantalla.setCabecera("Configuración de la aplicación");
         }
         @Override
         public void construirContenido() {
@@ -20,5 +20,8 @@ abstract class AjustesBuilder implements PantallaBuilder {
         public void construirBotonPrincipal() {
             pantalla.setBotonPrincipal("GUARDAR CAMBIOS");
         }
+        @Override
+        public Pantalla getPantalla() {
+            return pantalla;
     }
 }
