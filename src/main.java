@@ -1,5 +1,7 @@
 public class main {
 
+    //Pregunta: ¿Por qué utilizamos Builder en lugar de crear directamente un objeto Pantalla con un constructor que reciba todos sus atributos? Porque builder nos permite constuir el objeto complejo paso a paso y separar la construcion de la pantalla final
+
     public static void main(String[] args) {
 
         PantallaBuilder perfilBuilder = new PerfilBuilder();
